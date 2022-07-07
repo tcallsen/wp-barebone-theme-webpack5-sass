@@ -1,0 +1,10 @@
+$opensans-font-path: "../../font/open-sans" !default;
+
+// regular
+@font-face {
+  font-family: 'Open Sans';
+  src: url('#{$opensans-font-path}/opensans-regular-webfont.eot');
+  src: url('#{$opensans-font-path}/opensans-regular-webfont.eot') format('embedded-opentype'), url('#{$opensans-font-path}/opensans-regular-webfont.woff2') format('woff2'), url('#{$opensans-font-path}/opensans-regular-webfont.woff') format('woff'), url('#{$opensans-font-path}/opensans-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

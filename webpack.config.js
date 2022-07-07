@@ -8,7 +8,7 @@ module.exports = [
     entry: {
       'main': [
         './js/src/main.js',
-        './css/src/main.css'
+        './css/src/main.scss'
       ]
     },
     output: {
@@ -18,10 +18,23 @@ module.exports = [
     },
     module: {
       rules: [
-        // css extraction
+        // sass compilation
         {
-          test: /\.css$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader']
+          test: /\.(sass|scss)$/,
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        },
+        // loader for webfonts (only required if loading custom fonts)
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          type: 'asset/resource',
+          generator: {
+            filename: './css/build/fonts/[name][ext]',
+          }
+        },
+        // loader for images and icons (only required if css references images)
+        {
+          test: /\.(png|jpg|gif)$/,
+          type: 'asset/inline'
         },
       ]
     },

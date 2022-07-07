@@ -1,0 +1,24 @@
+html {
+  background: url(../../img/background.jpg);
+  background-size: cover;
+  font-family: 'Open Sans', serif;
+  font-weight: 400;
+}
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  color: white;
+}
