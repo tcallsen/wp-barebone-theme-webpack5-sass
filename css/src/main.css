@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Open Sans';
   src: url('../../font/open-sans/opensans-regular-webfont.eot');
   src: url('../../font/open-sans/opensans-regular-webfont.eot') format('embedded-opentype'), url('../../font/open-sans/opensans-regular-webfont.woff2') format('woff2'), url('../../font/open-sans/opensans-regular-webfont.woff') format('woff'), url('../../font/open-sans/opensans-regular-webfont.ttf') format('truetype');
@@ -11,7 +11,7 @@ html {
   background-size: cover;
   font-family: 'Open Sans', serif;
   font-weight: 400;
-}
+} */
 
 body {
   text-align: center;
