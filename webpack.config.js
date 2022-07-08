@@ -4,6 +4,9 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
+// clean out build dir in-between builds
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = [
   {
     entry: {
@@ -13,7 +16,7 @@ module.exports = [
       ]
     },
     output: {
-      filename: './js/build/[name].js',
+      filename: './js/build/[name].min.[fullhash].js',
       path: path.resolve(__dirname),
       publicPath: '/wp-content/themes/wp-barebone-theme-webpack5-sass/',
     },
@@ -49,9 +52,16 @@ module.exports = [
       ]
     },
     plugins: [
+      // clear out build directories on each build
+      new CleanWebpackPlugin({
+        cleanOnceBeforeBuildPatterns: [
+          './js/build/*',
+          './css/build/*'
+        ]
+      }),
       // css extraction into dedicated file
       new MiniCssExtractPlugin({
-        filename: './css/build/main.css'
+        filename: './css/build/main.min.[fullhash].css'
       }),
     ],
     optimization: {
