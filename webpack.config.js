@@ -18,6 +18,12 @@ module.exports = [
     },
     module: {
       rules: [
+        // js babelization
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
+        },
         // sass compilation
         {
           test: /\.(sass|scss)$/,
