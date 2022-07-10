@@ -17,8 +17,7 @@ module.exports = [
     },
     output: {
       filename: './js/build/[name].min.[fullhash].js',
-      path: path.resolve(__dirname),
-      publicPath: '/wp-content/themes/wp-barebone-theme-webpack5-sass/',
+      path: path.resolve(__dirname)
     },
     module: {
       rules: [
