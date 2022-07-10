@@ -3,7 +3,7 @@
   // register webpack compiled js and css with theme
   function enqueue_webpack_scripts() {
     
-    $cssFilePath = glob( get_template_directory() . '/css/build/main.min.*' );
+    $cssFilePath = glob( get_template_directory() . '/css/build/main.min.*.css' );
     $cssFileURI = get_template_directory_uri() . '/css/build/' . basename($cssFilePath[0]);
     wp_enqueue_style( 'main_css', $cssFileURI );
     
