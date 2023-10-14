@@ -10,6 +10,8 @@ After deploying and enabling the theme on a WordPress instance (see *Deploying t
 npm install
 ```
 
+Note: the webpack build was created/tested with Node.js `v18.18.2` (LTS).
+
 ## Build
 
 Various build commands are available that execute the webpack 5 builds:
